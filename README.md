@@ -11,12 +11,11 @@ Velocis is not just a launcher — it is an **adaptive transfer engine**.
 ## ⚡ Key Features
 
 * Ultra-fast download engine optimized for maximum throughput
-* Dynamic parallel downloads with adaptive segmentation
+* Dynamic parallel downloads
 * Intelligent multi-connection and mirror selection
 * Latency-first routing and throughput prioritization
-* Predictive caching and zero-waste bandwidth usage
 * Instant recovery from network interruptions
-* Real-time performance metrics and diagnostics
+* Real-time performance metrics 
 * Gamer-focused, minimal and fast UI
 
 ---
@@ -62,8 +61,6 @@ Core concepts:
 * Dynamic parallelization
 * Adaptive file segmentation
 * Smart retry and resume logic
-* Latency-aware routing
-* Throughput-based optimization
 
 Every millisecond and every megabyte matters.
 
@@ -100,7 +97,6 @@ Future modules may include:
 * Game launchers
 * Mod managers
 * Cloud sync
-* P2P acceleration
 * Plugin system
 
 ---
