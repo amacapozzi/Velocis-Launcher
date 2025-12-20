@@ -13,7 +13,7 @@ model Game {
   description String
   imageUrl    String
   snapshotUrl String
-  sizeBytes   Int
+  sizeInKB    Int
   isAvailable Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
