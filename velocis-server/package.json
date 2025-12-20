@@ -1,0 +1,29 @@
+{
+  "name": "velocis-server",
+  "version": "1.0.50",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "bun eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@eslint/js": "^9.39.2",
+    "bun-types": "latest",
+    "eslint": "^9.39.2",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "typescript-eslint": "^8.50.0"
+  }
+}
