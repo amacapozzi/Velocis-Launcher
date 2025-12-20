@@ -13,3 +13,20 @@ datasource db {
   provider = "postgresql"
 }
 
+model Game {
+  id           String   @id @default(uuid())
+  name         String
+  description  String
+  imageUrl     String
+  snapshotUrl  String
+  sizeBytes    BigInt
+  isAvailable  Boolean  @default(true)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([isAvailable])
+}
+
+
+

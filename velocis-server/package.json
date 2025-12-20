@@ -13,7 +13,10 @@
     ]
   },
   "dependencies": {
-    "elysia": "latest"
+    "@prisma/adapter-pg": "^7.2.0",
+    "@prisma/client": "^7.2.0",
+    "elysia": "latest",
+    "pg": "^8.16.3"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
