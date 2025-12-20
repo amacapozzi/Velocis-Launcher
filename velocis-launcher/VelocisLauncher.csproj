@@ -37,4 +37,8 @@
     <PackageReference Include="Photino.NET" Version="4.0.16" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="FilesUpdater\FilesUpdaterLib\FilesUpdaterLib.csproj" />
+  </ItemGroup>
+
 </Project>
