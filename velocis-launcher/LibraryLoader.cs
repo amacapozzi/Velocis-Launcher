@@ -25,6 +25,7 @@ namespace VelocisLauncher
                         if (stream == null)
                         {
                             var resources = string.Join(", ", assembly.GetManifestResourceNames());
+
                             throw new Exception($"Could not find embedded resource '{resourceName}'. Found: {resources}");
                         }
 

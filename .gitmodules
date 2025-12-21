@@ -1,6 +1,3 @@
-[submodule "VelocisLauncher/FilesUpdater"]
-	path = VelocisLauncher/FilesUpdater
-	url = https://github.com/Mrgaton/FilesUpdater.git
 [submodule "velocis-launcher/FilesUpdater"]
 	path = velocis-launcher/FilesUpdater
 	url = https://github.com/Mrgaton/FilesUpdater.git

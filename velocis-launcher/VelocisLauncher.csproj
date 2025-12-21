@@ -38,7 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="FilesUpdater\FilesUpdaterLib\FilesUpdaterLib.csproj" />
+    <ProjectReference Include="..\files-updater\FilesUpdaterLib\FilesUpdaterLib.csproj" />
   </ItemGroup>
 
 </Project>

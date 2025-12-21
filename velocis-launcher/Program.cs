@@ -1,6 +1,7 @@
 ﻿using Photino.NET;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Security.Principal;
 
 namespace VelocisLauncher
 {
@@ -48,11 +49,13 @@ namespace VelocisLauncher
                 .SetDevToolsEnabled(Debug)
                 .SetFileSystemAccessEnabled(true)
                 .SetSmoothScrollingEnabled(true)
+                .SetUserAgent("VelocisLauncher/1.0")
                 .SetResizable(true)
                 .SetTemporaryFilesPath(DataPath)
                 .Center()
-
                 .Load(args.Length > 0 ? args[0] : "https://mold-willing-can-invitations.trycloudflare.com/");
+
+            window.SetLogVerbosity(0);
 
             window.RegisterWebMessageReceivedHandler((_, e) =>
             {
