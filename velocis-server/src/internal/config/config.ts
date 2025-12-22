@@ -6,3 +6,9 @@ if (!env.DATABASE_URL)
 export const DATABASE_CONFIG = {
   databaseUrl: env.DATABASE_URL!,
 };
+
+export const ALLOWED_DOMAINS = [
+  "http://localhost:3000",
+  "http://localhost:4321",
+  "http://localhost:8080",
+];
