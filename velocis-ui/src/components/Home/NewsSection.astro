@@ -1,0 +1,42 @@
+---
+const news = [
+  {
+    img: "/mock/news1.jpg",
+    title: "Rumbleverse - Mid-Season Update!",
+    date: "NOVEMBER 14, 2022",
+  },
+  {
+    img: "/mock/news2.jpg",
+    title: "Love Yourself For Who You Are With Passage At Rainbow Festival 2022",
+    date: "DECEMBER 03, 2022",
+  },
+];
+---
+
+<div>
+  <div class="flex items-center justify-between px-2">
+    <div class="text-[12px] tracking-[0.22em] text-white/70 font-semibold">NEWS</div>
+    <button class="h-7 px-4 rounded-full glass-soft text-[11px] font-semibold text-white/75">
+      READ MORE
+    </button>
+  </div>
+
+  <div class="mt-4 grid grid-cols-2 gap-6">
+    {news.map((n) => (
+      <article class="rounded-4xl overflow-hidden">
+        <div class="rounded-4xl overflow-hidden shadow-[0_18px_40px_rgba(0,0,0,.55)]">
+          <img src={n.img} alt="" class="w-full h-40 object-cover" />
+        </div>
+
+        <div class="mt-3 px-1">
+          <div class="text-[11px] text-white/88 font-semibold leading-snug">
+            {n.title}
+          </div>
+          <div class="mt-1 text-[10px] tracking-[0.16em] text-white/45 font-semibold">
+            {n.date}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</div>

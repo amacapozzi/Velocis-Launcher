@@ -1,0 +1,19 @@
+---
+export const prerender = false;
+
+import LoginPage from "@/components/auth/LoginCard";
+import "@/styles/global.css";
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Velocis</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <LoginPage client:load />
+  </body>
+</html>
+

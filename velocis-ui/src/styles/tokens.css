@@ -1,0 +1,29 @@
+:root {
+  --app-bg: #050607;
+  --panel: rgba(18, 18, 18, 0.58);
+  --panel-2: rgba(26, 26, 26, 0.58);
+  --stroke: rgba(255, 255, 255, 0.08);
+  --stroke-2: rgba(255, 255, 255, 0.12);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.62);
+  --muted-2: rgba(255, 255, 255, 0.44);
+
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+
+  --shadow-1: 0 18px 50px rgba(0, 0, 0, 0.55);
+  --shadow-2: 0 10px 25px rgba(0, 0, 0, 0.55);
+  --shadow-3: 0 6px 14px rgba(0, 0, 0, 0.45);
+
+  --blur-1: blur(14px);
+  --blur-2: blur(18px);
+
+  --glow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 18px 80px rgba(0, 0, 0, 0.65);
+}
+
+html,
+body {
+  background: var(--app-bg);
+}

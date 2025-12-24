@@ -1,0 +1,55 @@
+---
+import LeftRail from "../chrome/LeftRail.astro";
+import {HeroStage} from "@/components/Home/HeroStage";
+import NewsSection from "./NewsSection.astro";
+import LibrarySection from "./LibrarySection.tsx";
+
+const contentPadding = "padding-left: calc(var(--left-rail-w) + var(--stage-gap) + 24px); padding-right: calc(var(--right-rail-w) + var(--stage-gap) + 24px);";
+---
+
+<script is:inline>
+  !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.34/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+</script>
+
+<div class="relative w-full min-h-screen bg-[#0a0a0a] overflow-x-hidden">
+  <div class="fixed inset-0 z-10 pointer-events-none">
+    <LeftRail />
+  </div>
+
+  <main class="relative z-10">
+    <!-- HERO SECTION -->
+    <section class="hero-wrapper relative w-full overflow-hidden">
+      <!-- Unicorn Studio Background Effect -->
+      <div data-us-project="bmaMERjX2VZDtPrh4Zwx" class="absolute w-full h-full left-0 top-0 -z-10"></div>
+      
+      <div class="absolute inset-0 pointer-events-none z-[2]">
+        <div class="absolute inset-0 bg-linear-to-r from-black/20 via-black/10 to-transparent" />
+        <div class="absolute inset-0 bg-linear-to-b from-black/3 via-transparent to-black/30" />
+        <div class="absolute inset-0 hero-vignette opacity-40" />
+      </div>
+      
+      <div class="relative z-[3] h-full pt-12" style={contentPadding}>
+        <HeroStage client:load />
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="relative pb-10" style={contentPadding}>
+      <div class="mt-8">
+        <NewsSection />
+      </div>
+
+      <div class="mt-12 mb-10">
+        <div class="flex items-center justify-between px-2 mb-6">
+          <div class="text-[12px] tracking-[0.22em] text-white/70 font-semibold">
+            LIBRARY
+          </div>
+          <button class="h-7 px-4 rounded-full glass-soft text-[11px] font-semibold text-white/75">
+            VIEW ALL
+          </button>
+        </div>
+        <LibrarySection client:load />
+      </div>
+    </section>
+  </main>
+</div>

@@ -1,0 +1,68 @@
+---
+const { title = "Launcher UI" } = Astro.props;
+import "../styles/global.css";
+
+import LeftRail from "@/components/chrome/LeftRail.astro";
+import TopPillBar from "@/components/chrome/TopPillBar.astro";
+import SidebarNavigation from "@/components/chrome/SidebarNavigation";
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation-duration: 0.4s;
+        animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      ::view-transition-old(root) {
+        z-index: 1;
+      }
+
+      ::view-transition-new(root) {
+        z-index: 2;
+      }
+    </style>
+    
+    <!-- Unicorn Studio Script -->
+    <script type="text/javascript" is:inline>
+      !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.34/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+    </script>
+  </head>
+
+  <body class="bg-[#0a0a0a] text-white">
+    <div class="relative h-screen w-full overflow-hidden">
+      <div class="fixed inset-0 z-40 pointer-events-none">
+        <div class="absolute left-0 top-0 bottom-0 pointer-events-auto">
+          <LeftRail />
+        </div>
+
+        <div class="absolute top-0 left-0 right-0 pointer-events-auto">
+          <TopPillBar />
+        </div>
+
+      </div>
+
+      <SidebarNavigation client:load />
+
+      <main class="relative z-10 h-full w-full overflow-y-auto overflow-x-hidden">
+        <!-- Content container (safe areas) -->
+        <div
+          class="min-h-full"
+         
+        >
+          <slot />
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
